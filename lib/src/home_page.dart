@@ -23,7 +23,7 @@ Widget _list() {
     initialData: [],
     builder: ( BuildContext context, AsyncSnapshot<List<dynamic>> snapshot){
 
-      print('builder ${snapshot.data}');
+      //print('builder ${snapshot.data}');
 
       return ListView(
         children: _listItems( snapshot.data, context ),
