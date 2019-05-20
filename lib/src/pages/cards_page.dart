@@ -15,6 +15,34 @@ class CardPage extends StatelessWidget {
             height: 20.0,
           ),
           _cardType2(),
+          SizedBox(
+            height: 20.0,
+          ),
+          _cardType1(),
+          SizedBox(
+            height: 20.0,
+          ),
+          _cardType2(),
+          SizedBox(
+            height: 20.0,
+          ),
+          _cardType1(),
+          SizedBox(
+            height: 20.0,
+          ),
+          _cardType2(),
+          SizedBox(
+            height: 20.0,
+          ),
+          _cardType1(),
+          SizedBox(
+            height: 20.0,
+          ),
+          _cardType2(),
+          SizedBox(
+            height: 20.0,
+          ),
+
         ],
       ),
     );
@@ -22,6 +50,8 @@ class CardPage extends StatelessWidget {
 
   Widget _cardType1() {
     return Card(
+      elevation: 10.0,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
       child: Column(
         children: <Widget>[
           ListTile(
@@ -45,7 +75,8 @@ class CardPage extends StatelessWidget {
   }
 
   Widget _cardType2() {
-    return Card(
+    final card = Container(
+//      clipBehavior: Clip.antiAlias,
       child: Column(
         children: <Widget>[
           FadeInImage(
@@ -66,6 +97,23 @@ class CardPage extends StatelessWidget {
               child: Text(
                   'Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño'))
         ],
+      ),
+    );
+
+    return Container(
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(30.0),
+          color: Colors.white,
+          boxShadow: <BoxShadow>[
+            BoxShadow(
+                color: Colors.black26,
+                blurRadius: 10.0,
+                spreadRadius: 2.0,
+                offset: Offset(2.0, 10.0)),
+          ]),
+      child: ClipRRect(
+        child: card,
+        borderRadius: BorderRadius.circular(30.0),
       ),
     );
   }
